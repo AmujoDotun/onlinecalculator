@@ -1,6 +1,6 @@
 <template>
   <div class="calculator">
-    <div class="display">123444</div>
+    <div class="display">{{ current || 0 }}</div>
     <div>C</div>
     <div class="btn" >+/-</div>
     <div class="btn">%</div>
@@ -25,7 +25,13 @@
 
 <script>
 export default {
-  name: 'Calculator'
+  name: 'Calculator',
+
+  data() {
+    return {
+      current : '',
+    }
+  }
 }
 </script>
 
