@@ -18,7 +18,7 @@
     <div @click="append('3')" class="btn">3</div>
     <div class="btn operator">+</div>
     <div @click="append('0')" class="zero btn">0</div>
-    <div class="btn">.</div>
+    <div @click="dot" class="btn">.</div>
     <div class="btn operator">=</div>
   </div>
 </template>
@@ -52,7 +52,7 @@ export default {
       },
       dot(){
         //this is to only add dot and once added it can't be added again
-        if(this.current.indexOf('.' === -1)){
+        if(this.current.indexOf('.') === -1){
           this.append('.');
         }
       }
